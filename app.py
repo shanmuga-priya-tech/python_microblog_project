@@ -19,8 +19,8 @@ def create_app():
 
             entries_with_date=[
                     (entry["content"], #content we type,
-                    entry["time"], #formated date 
-                    datetime.datetime.strptime(entry["time"],"%Y-%m-%d").strftime("%b %d"))
+                    entry["date"], #formated date 
+                    datetime.datetime.strptime(entry["date"],"%Y-%m-%d").strftime("%b %d"))
                 for entry in app.db.entries.find({})
                 ]
             return render_template("Home.html",entries=entries_with_date)
