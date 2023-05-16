@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Micro Blog</title>
+
+    <link rel="stylesheet" href="\static\css\header.css" />
+    <link rel="stylesheet" href="\static\css\main.css" />
+    <link rel="stylesheet" href="\static\css\footer.css" />
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="navbar_logo">
+            <img class="logo"src="\static\microblog-logo.svg" alt="microblog-logo"/>Microblog
+        </div>
+        <ul class="navbar_list">
+            <li class="navbar_list_items"><a href="#" class="navbar_link">Recent</a> </li>
+            <li class="navbar_list_items"><a href="#" class="navbar_link">Calender</a> </li>
+        </ul>
+    </header>
+
+    <main class="main">
+
+        <section>
+            <h1>Add new entry</h1>
+            <!--action is where we are going to snd the data-->
+            <form class="form" method="post">
+                <p class="form_input">
+                    <label for="sample_input" class="form_label">Entry contents:</label>
+                    <textarea name="content" id="entry"  class="form_textarea"></textarea>
+                </p>
+                <button type="submit" class="form_submit">Add entry</button>
+            </form>
+        </section>
+
+        <section>
+            <h1>Recent Posts</h1>
+            {% for entry in entries %}
+            <article class="entry">
+                <div>
+                    <h2 class="entry_title">{{ entry[0] | truncate(30,true) }}</h2>
+                    <time  class="entry_date" datetime="{{ entry[1] }}">&#183; {{ entry[2] }}</time>
+                </div>
+                <p class="entry_content">{{ entry[0] }}</p>
+            </article>
+            {% endfor %}
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer_content">
+            <section class="left">
+                <a class="footer_items">Made by Shanmuga Priya</a>
+                <a class="footer_items">Check out my other projects</a>
+            </section>
+
+            <section class="right">
+                <div  class="footer_column">
+                    <a class="footer_items">Recent</a>
+                    <a class="footer_items">Calender</a>  
+                </div>
+                
+                <div  class="footer_column">
+                    <a class="footer_items">About</a>
+                    <a class="footer_items">How this was made</a>  
+                </div>
+            </section>
+
+        </div>
+    </footer>
+</body>
+</html>
