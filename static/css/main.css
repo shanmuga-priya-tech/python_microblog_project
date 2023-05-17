@@ -44,8 +44,15 @@ body{
     background-color: #18c1e1;
 }
 .entry{
-    margin-top: 50px;
+    margin-top: 15px;
+    border-bottom: 1px solid #ccc; /* Add a bottom border */
+    padding-bottom: 1px;
 }
+
+.entry:last-child {
+    border-bottom: none; /* Remove the bottom border from the last entry */
+ }
+
 .entry_title{
     display: inline;
     font-size: 18px;
