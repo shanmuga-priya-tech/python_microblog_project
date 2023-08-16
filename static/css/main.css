@@ -4,11 +4,21 @@
 body{
     box-sizing: border-box;
     margin: 0;
+    font-family: 'Lato', sans-serif;
+    background-color: rgb(222, 222, 222)
+    
 }
 .main{
     max-width: 450px;
     margin: 0 auto;
     padding: 0 20px;
+    
+
+}
+.title{
+    color:  rgb(1, 1, 84);
+    margin:0px;
+    font-size: 20px;
 }
 .form{
     display: flex;
@@ -21,17 +31,19 @@ body{
 .form_label{
     display: block;
     margin-bottom: 10px;
+    font-size: 20px;
 }
 .form_textarea{
     width: inherit;
     font-size: 18px;
     padding: 12px 20px;
     border: none;
-    background-color: #dde9e9;
-    margin-bottom: 10px;   
+    background-color: hsl(180, 29%, 97%);
+    margin-bottom: 10px; 
+    resize: none;  
 }
 .form_submit{
-    background-color: #3cd0ff;
+    background-color: #1cc9fe;
     border: none;
     font-size: 18px;
     font-weight: bold;
@@ -39,29 +51,31 @@ body{
     border-radius: 20px;
     color: antiquewhite;
     cursor: pointer;
+    
 }
 .form_submit:hover{
-    background-color: #18c1e1;
+    background-color: #11bfff;
+    color:rgb(1, 1, 84);
 }
 .entry{
     margin-top: 15px;
-    border-bottom: 1px solid #ccc; /* Add a bottom border */
+    border-bottom: 1px solid #979797; /* Add a bottom border */
     padding-bottom: 1px;
 }
-
 .entry:last-child {
     border-bottom: none; /* Remove the bottom border from the last entry */
- }
-
+  }
 .entry_title{
     display: inline;
     font-size: 18px;
+    color:rgb(0, 0, 50)
 }
 .entry_date{
-    color: #5c6b70;
+    color: #4b585c;
     
 }
 .entry_content{
     font-size: 16px;
     line-height: 150%;
+    color:rgb(0, 0, 50)
 }
