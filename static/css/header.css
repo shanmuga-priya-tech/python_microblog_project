@@ -1,16 +1,21 @@
 .navbar{
-    max-width: 640px;
-    margin: 50px auto;
+    max-width: 550px;
+    margin: 30px auto 10px auto;
     padding: 0 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     font-size: 24px;
+    font-family: 'Lato', sans-serif;
+  
     
 }
 .navbar_logo{
     display: flex;
     align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(62, 181, 255);
 }
 .logo{
     margin-right: 20px;
@@ -19,10 +24,13 @@
     display: flex;
     padding: 0;
     list-style: none;
-    color: #5c6b70;
+    color: #485255;
 }
 .navbar_list_items{
     margin-left: 50px;
+}
+.navbar_list_items:hover{
+    color:rgb(0, 174, 255)
 }
 .navbar_link{
     text-decoration: none;
