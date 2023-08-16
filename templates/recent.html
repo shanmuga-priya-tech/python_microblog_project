@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microblog</title>
+    <link rel="stylesheet" href="\static\css\recent.css">
+</head>
+<body>
+    <section>
+        <div class="nav">
+        <h1 class="title">Recent Posts</h1>
+        <a class="title1" href="{{url_for('home')}}">Home</a>
+    </div>
+        {% for entry in entries %}
+        <article class="entry">
+            <div>
+                <h2 class="entry_title">{{ entry[0] | truncate(30,true) }}</h2>
+                <time  class="entry_date" datetime="{{ entry[1] }}">&#183; {{ entry[2] }}</time>
+            </div>
+            <p class="entry_content">{{ entry[0] }}</p>
+        </article>
+        {% endfor %}
+    </section>
+</body>
+</html>
