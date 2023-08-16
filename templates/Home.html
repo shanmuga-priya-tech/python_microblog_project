@@ -5,7 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+
     <title>Micro Blog</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="\static\css\header.css" />
     <link rel="stylesheet" href="\static\css\main.css" />
@@ -18,20 +23,19 @@
             <img class="logo"src="\static\microblog-logo.svg" alt="microblog-logo"/>Microblog
         </div>
         <ul class="navbar_list">
-            <li class="navbar_list_items"><a href="#" class="navbar_link">Recent</a> </li>
-            <li class="navbar_list_items"><a href="#" class="navbar_link">Calender</a> </li>
+            <li class="navbar_list_items"><a href="{{url_for('recent_post')}}" class="navbar_link">Recent</a> </li>
         </ul>
     </header>
 
     <main class="main">
 
         <section>
-            <h1>Add new entry</h1>
+            <h2 class="title">Add new entry</h2>
             <!--action is where we are going to snd the data-->
             <form class="form" method="post">
                 <p class="form_input">
-                    <label for="sample_input" class="form_label">Entry contents:</label>
-                    <textarea name="content" id="entry"  class="form_textarea"></textarea>
+                    <!-- <label for="sample_input" class="form_label">Entry contents:</label> -->
+                    <textarea name="content" id="entry"  rows="3" class="form_textarea"></textarea>
                 </p>
                 <button type="submit" class="form_submit">Add entry</button>
             </form>
@@ -55,19 +59,14 @@
     <footer class="footer">
         <div class="footer_content">
             <section class="left">
-                <a class="footer_items">Made by Shanmuga Priya</a>
-                <a class="footer_items">Check out my other projects</a>
+                <a class="footer_items">About</a>
+                <a class="footer_items" href="{{url_for('recent_post')}}">Recent</a>
             </section>
 
             <section class="right">
                 <div  class="footer_column">
-                    <a class="footer_items">Recent</a>
-                    <a class="footer_items">Calender</a>  
-                </div>
-                
-                <div  class="footer_column">
-                    <a class="footer_items">About</a>
-                    <a class="footer_items">How this was made</a>  
+                    <a class="footer_items">Made by Shanmuga Priya</a>
+                    <a class="footer_items">© 2023 Microblog. All rights reserved.</a>  
                 </div>
             </section>
 
